@@ -1,29 +1,33 @@
- var point = 0 
+ var point = 0;
+
  function result(){
-     if(document.getElementById("true1").checked)
-
-     {
+    document.getElementById("true1").addEventListener("click",function(){
+        point += 5
+        
+     })
+     
+     document.getElementById("true2").addEventListener("click",function(){
          point += 5
-     }
-    if(document.getElementById("true2").checked) 
-    {
-        point += 5
-    }
-    if(document.getElementById("true3").checked) 
-    {
-        point += 5
-    }
-    if(document.getElementById("true4").checked) 
-    {
-        point += 5
-    }
-    if(document.getElementById("true5").checked) 
-    {
-        point += 5
-    }
+     })
+     document.getElementById("true3").addEventListener("click",function(){
+         point += 5
+     })
+     document.getElementById("true4").addEventListener("click",function(){
+         point += 5
+     })
+     document.getElementById("true5").addEventListener("click",function(){
+         point += 5
+     })
 
-    var display = document.getElementById("result")
-    display.textContent = point
-
+   
  }
     
+
+ function submit(){
+     document.querySelector(".submit").addEventListener("click",function(){
+       var score = document.querySelector("#result");
+       score.textContent = point
+     })
+ }
+ 
+ submit();
